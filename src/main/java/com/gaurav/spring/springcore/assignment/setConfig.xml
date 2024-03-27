@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd" 
+xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans">
+
+<bean name="items" class="com.gaurav.spring.springcore.assignment.Items">
+<property name="itemName" value="Watch"></property>
+<property name="id" value="101"></property>
+<property name="price" value="10000"></property>
+<property name="quantity" value="10"></property>
+</bean>
+
+<bean name="item2" class="com.gaurav.spring.springcore.assignment.Items">
+<property name="itemName" value="Headphones"></property>
+<property name="id" value="102"></property>
+<property name="price" value="5000"></property>
+<property name="quantity" value="5"></property>
+</bean> 
+
+<bean name="shoppingCart" class="com.gaurav.spring.springcore.assignment.ShoppingCart">
+<property name="items" ref="items"></property>
+<property name="item2" ref="item2"></property>
+</bean>
+
+
+</beans>

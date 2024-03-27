@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd" 
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:context="http://www.springframework.org/schema/context" 
+xmlns:c="http://www.springframework.org/schema/c"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans">
+
+<bean name="certification1" class="com.gaurav.spring.springcore.constinject.Certification" 
+c:c_name="Java Certification" c:duration="3 Months" />
+
+<bean name="certification2" class="com.gaurav.spring.springcore.constinject.Certification" >
+<constructor-arg value="Python Certification"></constructor-arg>
+<constructor-arg value="2 Months"></constructor-arg>
+</bean>
+
+
+<bean name="student1" class="com.gaurav.spring.springcore.constinject.Student">
+<constructor-arg value="Gaurav Bisht"></constructor-arg>
+<constructor-arg value="197740"></constructor-arg>
+<constructor-arg ref="certification1"></constructor-arg>
+<constructor-arg name="opt_courses">
+<list>
+<value>JAVA</value>
+<value>C++</value>
+<value>Python</value>
+</list>
+</constructor-arg>
+
+</bean>
+
+<bean name="student2" class="com.gaurav.spring.springcore.constinject.Student" c:name="John Doe" c:roll_no="99889" >
+<constructor-arg ref="certification2"></constructor-arg>
+<constructor-arg>
+<list>
+<value>System Design</value>
+<value>SQL</value>
+<value>Operating System</value>
+</list>
+</constructor-arg>
+</bean>
+
+ </beans>

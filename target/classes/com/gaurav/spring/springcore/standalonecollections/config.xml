@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd 
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/util
+http://www.springframework.org/schema/util/spring-util.xsd"
+
+xmlns:p="http://www.springframework.org/schema/p" 
+xmlns:util="http://www.springframework.org/schema/util" 
+xmlns:context="http://www.springframework.org/schema/context" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans">
+
+<!-- standalone list -->
+<util:list list-class="java.util.LinkedList"
+id="friendsList">
+<value>Gaurav</value>
+<value>Rohan</value>
+<value>Karan</value>
+<value>Rahul</value>
+</util:list>
+
+<!-- standalone map -->
+<util:map map-class="java.util.HashMap" id="age">
+<entry key="Gaurav" value="24"></entry>
+<entry key="Karan" value="24"></entry>
+<entry key="Sonu" value="26"></entry>
+</util:map>
+
+<!-- standalone properties -->
+<util:properties id="course">
+<prop key="Gaurav">Spring Boot</prop>
+<prop key="Karan">Cloud</prop>
+<prop key="Sarthak">Redhat Linux</prop>
+</util:properties>
+
+
+<bean name="friends" class=" com.gaurav.spring.springcore.standalonecollections.Friends">
+<property name="name" ref="friendsList"></property>
+<property name="age" ref="age"></property>
+<property name="course" ref="course"></property>
+</bean>
+
+ </beans>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xsi:schemaLocation="http://www.springframework.org/schema/beans 
+http://www.springframework.org/schema/beans/spring-beans.xsd 
+http://www.springframework.org/schema/context 
+http://www.springframework.org/schema/context/spring-context.xsd
+http://www.springframework.org/schema/util
+http://www.springframework.org/schema/util/spring-util.xsd"
+
+xmlns:p="http://www.springframework.org/schema/p" 
+xmlns:util="http://www.springframework.org/schema/util" 
+xmlns:context="http://www.springframework.org/schema/context" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.springframework.org/schema/beans">
+
+<util:list list-class= "java.util.ArrayList" id="courses">
+<value>JAVA</value>
+<value>Spring</value>
+<value>Spring boot</value>
+<value>Microservices</value>
+<value>System design</value>
+</util:list>
+
+<context:component-scan base-package="com.gaurav.spring.springcore.stereotype"></context:component-scan>
+
+ </beans>
